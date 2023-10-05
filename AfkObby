@@ -1,0 +1,59 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "BaconBoss Hub | AFK to Win Obby", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+local TpTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+_G.time = true
+function time()
+     while _G.time == true do
+        local playerHead = game.Players.LocalPlayer.Character.Head 
+        for i, v in pairs(game:GetService("Workspace").MoveTimer:GetDescendants()) do
+        if v.Name == "TouchInterest" and v.Parent then
+        firetouchinterest(playerHead, v.Parent, 0)
+         wait(0.001)
+        firetouchinterest(playerHead, v.Parent, 1)
+        end
+       end
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, 411.089996, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, 246.264969, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, 53.9728851, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, -189.911011, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, -350.675629, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, -513.876465, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, -743.887024, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, -987.713318, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, -1115.24268, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, -1115.24268, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.2551765, 42.5599365, -1115.24268, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        wait(0.5)
+    end
+end
+
+TpTab:AddLabel("You Need To Wait Around 150 Seconds Of AFK Point For Win")
+TpTab:AddLabel("Rejoin If Your AFK Point Does Not Run")
+
+
+TpTab:AddToggle({
+    Name = "Auto Obby",
+    Default = false,
+    Callback = function(Value)
+        _G.time = Value
+        time()
+    end    
+})
